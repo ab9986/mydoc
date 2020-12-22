@@ -1535,17 +1535,17 @@
 ** 属性的语法规则		 		 	 :如何声明属性
    属性是以键值对的形式出现的. 当需要分配属性时,属性需要放入一个名为`PROPERTIES`的特殊抽屉([[Drawers][drawer]])中. 每个属性一行,键(用冒号括起来)在前,值在后. 下面是一个例子
    #+BEGIN_SRC org
-     ,* CD collection
-     ,** Classic
-     ,*** Goldberg Variations
-     ,    :PROPERTIES:
-     ,    :Title:     Goldberg Variations
-     ,    :Composer:  J.S. Bach
-     ,    :Artist:    Glen Gould
-     ,    :Publisher: Deutsche Grammophon
-     ,    :NDisks:    1
-     ,    :END:
-   #+END_SRC
+,* CD collection
+,** Classic
+,*** Goldberg Variations
+,    :PROPERTIES:
+,    :Title:     Goldberg Variations
+,    :Composer:  J.S. Bach
+,    :Artist:    Glen Gould
+,    :Publisher: Deutsche Grammophon
+,    :NDisks:    1
+,    :END:
+#+END_SRC
    根据变量`org-use-property-inheritance`的值的不同,属性可能具有也可能不具有继承性,详见[[Property Inheritance][继承的继承性]]
 
    你可能想设定属性`:Xyz:`只能有哪些值,你可以通过定义一个名为`:Xyz_ALL`的属性来做到这一点. `:Xyz_ALL:`是一类特殊的属性,该属性具有继承性,因此如果你在第一层条目上设置了这样的属性,它会对整个树生效. 通过约束属性的所有值,可以减少设置属性时输入错误的概率. 举个例子,要记录收集的CD,你可以预定义好出版人和碟片数量,向下面一样:
@@ -1602,7 +1602,7 @@
    * C-c C-c D (org-delete-property-globally) :: 
 		全局删除某个属性,对当前文件中的所有条目都生效
    * C-c C-c c (org-compute-peroperty-at-point) :: 
-		计算光标所在的属性, 
+		计算光标所在的属性,
 ** 特殊的属性		 		 		 :Org-mode的其他特性说明
    一些特定的属性被定义用来开启Org-mode的一些特性(比如前面章节中讲到的TODO状态和优先级). 之所以提供这些特殊的属性,是为了让你可以在column视图中查看到这些状态,还可以在搜索时匹配这些状态. 下面列出的这些特殊属性名,这些属性(除了`:CATEGORY:`)不应该放入属性抽屉中中
    #+BEGIN_EXAMPLE
